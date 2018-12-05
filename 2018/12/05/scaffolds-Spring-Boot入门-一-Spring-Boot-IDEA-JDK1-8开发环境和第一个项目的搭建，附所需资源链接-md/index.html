@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>scaffolds/Spring Boot入门(一)Spring Boot+IDEA+JDK1.8开发环境和第一个项目的搭建，附所需资源链接.md - Hexo</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com/defineYIDA"><span>Github</span></a></li><li><a href="https://blog.csdn.net/define_lin?t=1"><span>CSDN</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg"><div class="post-title"><h1 class="title">scaffolds/Spring Boot入门(一)Spring Boot+IDEA+JDK1.8开发环境和第一个项目的搭建，附所需资源链接.md</h1><ul class="meta"><li><i class="icon icon-author"></i>defineYIDA</li><li><i class="icon icon-clock"></i>10 Minutes</li><li><i class="icon icon-calendar"></i>2018年12月5日</li></ul></div></div><div class="article-content" style="max-width:800px"><p>﻿<img src="https://img-blog.csdnimg.cn/20181108145831237.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RlZmluZV9MSU4=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&nbsp;&nbsp;&nbsp;博主第一次了解Spring Boot 这个框架，之前的时候就一直对这个框架心驰神往，如今刚开始学习这个框架，把学习历程和过程中遇到的问题和解决方法记录下来，与大家一起分享！</p>
+<hr>
+<h3 id="关于Spring-Boot"><a href="#关于Spring-Boot" class="headerlink" title="关于Spring Boot"></a>关于Spring Boot</h3><p>&nbsp;&nbsp;&nbsp;Spring Boot 是由 Pivotal 团队提供的全新框架，其设计目的是用来简化新 Spring 应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。采用 Spring Boot 可以大大的简化你的开发模式，所有你想集成的常用框架，它都有对应的组件支持。</p>
+<p><strong>Spring Boot特性</strong></p>
+<ul>
+<li>使用 Spring 项目引导页面可以在几秒构建一个项目</li>
+<li>方便对外输出各种形式的服务，比如：REST API, WebSocket, Web, Streaming, Tasks</li>
+<li>非常简洁的安全策略集成</li>
+<li>支持关系数据库和非关系数据库</li>
+<li>支持运行期内嵌容器，如：Tomcat, Jetty</li>
+<li>强大的开发包，支持热启动</li>
+<li>自动管理依赖</li>
+<li>自带应用监控支持各种IED，如：IntelliJ IDEA 、NetBeans</li>
+</ul>
+<p><strong>学习网站</strong></p>
+<p><a href="http://springboot.fun/#resources" target="_blank" rel="noopener">Spring Boot 中文索引</a></p>
+<hr>
+<h3 id="开发环境的部署"><a href="#开发环境的部署" class="headerlink" title="开发环境的部署"></a>开发环境的部署</h3><blockquote>
+<p>操作系统：Windows 10</p>
+</blockquote>
+<p>为部署<code>Spring Boot</code>项目，我们需要的工具有：<strong>IDE:IntelliJ IDEA安装包</strong>，<strong>JDK安装包</strong>；<br>如果你需要部署的项目需要连接数据库的话还需要：<strong>MySQL安装包</strong>，<strong>Navicat For MySQL</strong>。<br>因为IDEA不用额外配置Maven,所以推荐大家使用！</p>
+<p><strong>安装IntelliJ IDEA:</strong></p>
+<p>可以使用学生注册获得免费版，也可以通过下面给出的破解码进行破解。<br>IntelliJ IDEA：<a href="https://www.jetbrains.com/idea/download/#section=windows" target="_blank" rel="noopener">https://www.jetbrains.com/idea/download/#section=windows</a><br>破解码：        <a href="http://idea.lanyus.com/" target="_blank" rel="noopener">http://idea.lanyus.com/</a></p>
+<p><strong>安装配置JDK:</strong></p>
+<p>JDK版本要求7以上，推荐使用8；</p>
+<p>JDK:<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a><br>配置的具体过程也就是一路next就行了；</p>
+<p><strong>安装MySQL：</strong></p>
+<p><strong>&nbsp;&nbsp;&nbsp;如果需要进行数据库相关操作，配置MySQL的时候就得注意了，这里分两种情况，如果你电脑上已经安装过，类似与XAMPP这种集成了MySQL的程序，初始的3306端口会被占用（如果你有XAMPP这种集成了MySQL的程序也可以直接用不用额外的安装了）。</strong><br><strong>如果在安装过程中端口被占用，你更换了端口，记得在项目的配置中更改对应的账号密码和端口号。</strong></p>
+<p>MySQL8.0下载地址：<a href="https://dev.mysql.com/downloads/windows/installer/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/windows/installer/</a></p>
+<hr>
+<h3 id="获得第一个Spring-Boot项目"><a href="#获得第一个Spring-Boot项目" class="headerlink" title="获得第一个Spring Boot项目"></a>获得第一个Spring Boot项目</h3><ol>
+<li><strong>通过Speing Initializr 获取第一个基础框架：</strong><br>1.1 这里：<a href="https://start.spring.io/" target="_blank" rel="noopener">https://start.spring.io/</a><br> 1.2 选择构建工具<code>Maven Project</code>、Spring Boot版本1.5.18以及一些工程基本信息，注意打开最下方的<code>Switch to the full version</code>，选择Web模块，可参考下图所示：<br> <img src="https://img-blog.csdnimg.cn/20181108153756739.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RlZmluZV9MSU4=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</ol>
+<p><strong>如果不选择web模块，则项目不会自动引入<code>spring-web</code>和<code>spring-webmvc</code>这两个jar包，<code>pom.xml</code>中也不会自动生成web模块，导致很多不必要麻烦。</strong></p>
+<p>1.3 点击<code>Generate Project</code>下载项目压缩包</p>
+<ol>
+<li><strong>解压项目包，并用IDE以<code>Maven</code>项目导入</strong><br>1.1 菜单中选择File–&gt;New–&gt;Project from Existing Sources…<br>1.2 选择解压后的项目文件夹，点击OK<br>1.3 点击Import project from external model并选择Maven，点击Next到底为止。<br>1.4 若你的环境有多个版本的JDK，注意到选择Java SDK的时候请选择Java 7以上的版本</li>
+</ol>
+<p><strong>项目结构解析：</strong></p>
+<p>通过上面步骤完成了基础项目的创建，如图所示，Spring Boot的基础结构共三个文件（具体路径根据用户生成项目时填写的Group所有差异）：</p>
+<ol>
+<li>src/main/java下的程序入口：            HelloApplication</li>
+<li>src/main/resources下的配置文件：application.properties</li>
+<li>src/test/下的测试入口：HelloApplicationTests<br><img src="https://img-blog.csdnimg.cn/20181108155659417.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RlZmluZV9MSU4=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</ol>
+<p><strong>编写Hello服务：</strong><br>在<code>com.example.hello</code>文件处右键生成如上图所示的<code>Controller</code>文件，并在文件中生成<code>helloController</code>类；<br>在类中编写如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">package com.example.hello.Controller;</span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.HashMap;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.Map;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestParam;</span><br><span class="line">import org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line">@RestController</span><br><span class="line">@RequestMapping(&quot;/hello&quot;)</span><br><span class="line">public class helloController &#123;</span><br><span class="line">    @RequestMapping</span><br><span class="line">    public String hello() &#123;</span><br><span class="line">        return &quot;Hello Spring-Boot&quot;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(&quot;/info&quot;)</span><br><span class="line">    public Map&lt;String, String&gt; getInfo(@RequestParam String name) &#123;</span><br><span class="line">        Map&lt;String, String&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">        map.put(&quot;name&quot;, name);</span><br><span class="line">        return map;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(&quot;/list&quot;)</span><br><span class="line">    public List&lt;Map&lt;String, String&gt;&gt; getList() &#123;</span><br><span class="line">        List&lt;Map&lt;String, String&gt;&gt; list = new ArrayList&lt;&gt;();</span><br><span class="line">        Map&lt;String, String&gt; map = null;</span><br><span class="line">        for (int i = 1; i &lt;= 5; i++) &#123;</span><br><span class="line">            map = new HashMap&lt;&gt;();</span><br><span class="line">            map.put(&quot;name&quot;, &quot;YIDA-&quot; + i);</span><br><span class="line">            list.add(map);</span><br><span class="line">        &#125;</span><br><span class="line">        return list;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>右键<code>HelloApplication</code>选择<code>Run(HelloApplication)</code>运行程序，控制台显示 <code>Started HelloApplication in 2.301 seconds (JVM running for 3.41)</code>即成功启动。</strong><br>在浏览器中输入url：<br><a href="http://localhost:8080/hello" target="_blank" rel="noopener">http://localhost:8080/hello</a><br>输出：Hello Spring-Boot<br><a href="http://localhost:8080/hello/info?name=YIDA" target="_blank" rel="noopener">http://localhost:8080/hello/info?name=YIDA</a><br>输出：{“name”:”YIDA”}<br><a href="http://localhost:8080/hello/list" target="_blank" rel="noopener">http://localhost:8080/hello/list</a><br>输出：[{“name”:”YIDA-1”},{“name”:”YIDA-2”},{“name”:”YIDA-3”},{“name”:”YIDA-4”},{“name”:”YIDA-5”}]</p>
+<p>–</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>如果出现默认8080端口被占用的问题，可能由于被其他程序占用或者被你以前生成的<code>spring-boot</code>项目占用了端口，可以通过在<code>application.properties</code>中设置将端口更改：<br><img src="https://img-blog.csdnimg.cn/20181108163024842.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RlZmluZV9MSU4=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><a href="https://github.com/defineYIDA/Spring-Boot-Case/tree/master/hello" target="_blank" rel="noopener">Hello小Demo的代码附件</a></p>
+</div><div class="article-meta" style="max-width:800px"></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cjpahay790000ucu53djb7huc" data-title="scaffolds/Spring Boot入门(一)Spring Boot+IDEA+JDK1.8开发环境和第一个项目的搭建，附所需资源链接.md" data-url="http://yoursite.com/2018/12/05/scaffolds-Spring-Boot入门-一-Spring-Boot-IDEA-JDK1-8开发环境和第一个项目的搭建，附所需资源链接-md/" site-name="ueibo"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
+var duoshuoQuery = {short_name: siteName};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();</script></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/2018/12/04/Spring-Boot入门-二-MyBatis-Plus的配置和使用和使用快速生成Mybatis的Java-POJO文件及数据库Mapping文件的界面工具/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/defineYIDA" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="https://github.com/defineYIDA" title="Weibo" target="_blank"><i class="icon icon-weibo"></i></a></li><li><a href="https://github.com/defineYIDA" title="SegmentFault" target="_blank"><i class="icon icon-segmentfault"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2018 Hexo<br><small>POWER BY <a href="https://hexo.io" target="_blank">HEXO</a></small><small>, THEME BY <a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank">LAUGHING</a></small></p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>
